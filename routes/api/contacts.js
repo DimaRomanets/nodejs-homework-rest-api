@@ -1,9 +1,8 @@
-
 const express = require("express");
 
 const { validateBody, isValidId } = require("../../middlewares");
 
-const { schemas } = require("../../models/contacts");
+const { schemas } = require("../../models/contacts.js");
 
 const router = express.Router();
 
