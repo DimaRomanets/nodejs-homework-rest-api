@@ -9,15 +9,15 @@ const subscriptionList = ["starter", "pro", "business"];
 
 const userSchema = new Schema(
   {
-    password: {
-      type: String,
-      required: [true, "Set password for user"],
-    },
     email: {
       type: String,
       match: emailRegexp,
       required: [true, "Email is required"],
       unique: true,
+    },
+    password: {
+      type: String,
+      required: [true, "Set password for user"],
     },
     subscription: {
       type: String,
